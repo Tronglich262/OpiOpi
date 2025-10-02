@@ -5,6 +5,7 @@ using Firebase;
 using Firebase.Auth;
 using Firebase.Extensions;   // ⭐ BẮT BUỘC phải có
 using System.Threading.Tasks;
+using System.Collections;
 
 public class FirebaseAuthManager : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class FirebaseAuthManager : MonoBehaviour
     void Start()
     {
         auth = FirebaseAuth.DefaultInstance;
-        logText.text = "FirebaseAuth đã sẵn sàng!";
+       logText.text = "";
     }
 
     // Đăng ký
@@ -38,19 +39,25 @@ public class FirebaseAuthManager : MonoBehaviour
             if (task.IsCanceled || task.IsFaulted)
             {
                 Debug.LogError("Register error: " + task.Exception);
-                logText.text = "❌ Đăng ký lỗi: " + task.Exception.Flatten().InnerExceptions[0].Message;
+                logText.text = " Đăng ký lỗi: " + task.Exception.Flatten().InnerExceptions[0].Message;
                 return;
             }
 
-            user = task.Result.User;
+            user = task.Result.User;        
             Debug.Log("User created: " + user.UserId);
+            StartCoroutine(deleytext());
 
             // Ẩn panel đăng ký, hiện panel đăng nhập
             dangkybtn.SetActive(false);
-            dangkybtn.SetActive(true);
-
-            logText.text = "✅ Đăng ký thành công: " + user.Email;
+            dangnhapbtn.SetActive(true);
         });
+    }
+    IEnumerator deleytext()
+    {
+        logText.text = " Đăng ký thành công: " + user.Email;
+        yield return new WaitForSeconds(2f);
+        logText.text = "";
+
     }
 
     // Đăng nhập
@@ -64,14 +71,14 @@ public class FirebaseAuthManager : MonoBehaviour
             if (task.IsCanceled || task.IsFaulted)
             {
                 Debug.LogError("Login error: " + task.Exception);
-                logText.text = "❌ Đăng nhập lỗi: " + task.Exception.Flatten().InnerExceptions[0].Message;
+                logText.text = " Đăng nhập lỗi: " + task.Exception.Flatten().InnerExceptions[0].Message;
                 return;
             }
 
             user = task.Result.User;
             Debug.Log("Login success, UserID: " + user.UserId);
 
-            logText.text = "✅ Đăng nhập thành công: " + user.Email;
+            logText.text = " Đăng nhập thành công: " + user.Email;
 
             // Load scene sau khi đăng nhập thành công
             SceneManager.LoadScene("Menu");
