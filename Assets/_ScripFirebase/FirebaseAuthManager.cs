@@ -80,15 +80,25 @@ public class FirebaseAuthManager : MonoBehaviour
     public void dangky1()
     {
         dangky.SetActive(true);
+        dangnhapbtn.SetActive(false);
         dangkybtn.SetActive(true);
         banglogin.SetActive(false);
         
     }
     public void dangnhap1()
     {
+
         dangky.SetActive(true);
+        dangkybtn.SetActive(false);
+
         dangnhapbtn.SetActive(true);
         banglogin.SetActive(false);
 
+    }
+    public void back() 
+    {
+        dangky.SetActive(false);
+        banglogin.SetActive(true);
+    
     }
 }
