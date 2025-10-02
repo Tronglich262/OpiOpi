@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "593134799497",
+    "project_id": "casual-ef0b6",
+    "storage_bucket": "casual-ef0b6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593134799497:android:54bb91b9db456214661458",
+        "android_client_info": {
+          "package_name": "com.mycompany.casual3d"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593134799497-cmdiotfrpnucghnjr9gcn3vl0min2o1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy2Hlm8IVJQ1rfQdhneGiBOakZHvv-cBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593134799497-cmdiotfrpnucghnjr9gcn3vl0min2o1p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "593134799497-5i6ekhepp1fj3mi10oe1v84nq1rn1lbg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "casual3D"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
