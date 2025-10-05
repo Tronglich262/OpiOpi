@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1960811770308362850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.098312
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 84.12062
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999521
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.009791018
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.122
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      propertyPath: m_Name
+      value: Barbarian
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3607168977499974049}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -465225552492890297}
+  m_SourcePrefab: {fileID: 100100000, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+--- !u!1 &1726948193527119667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa7e0a183c74e8640992f6f95e2d2e64, type: 3}
+  m_PrefabInstance: {fileID: 1960811770308362850}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3607168977499974049
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726948193527119667}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5fd0b11c968e18743b5e6a99649f83ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-465225552492890297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726948193527119667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970f9e83073755d4689c4346c7bb5ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Barbarian
+  hp: 30
+  attack: 20
+  speed: 30
+  cuteness: 30
+  story: 111
+  characterSprite: {fileID: 21300000, guid: a70143103f6b811468079fc3117fbf31, type: 3}

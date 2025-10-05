@@ -1,30 +1,43 @@
-﻿using UnityEngine;
+﻿using Unity.Cinemachine;
+using UnityEngine;
 
 public class CameraCursorToggle : MonoBehaviour
 {
-    private bool cursorLocked = true;
+    private CinemachineCamera freeLook;
 
-    void Update()
+    void Awake()
     {
-        if (Input.GetKey(KeyCode.LeftShift)) // giữ shift thì mở chuột
+        freeLook = GetComponent<CinemachineCamera>();
+        if (freeLook == null)
         {
-            UnlockCursor();
+            Debug.LogError("❌ Không tìm thấy CinemachineFreeLook trên Camera này!");
+        }
+    }
+
+    void Start()
+    {
+        // thử gán target ngay từ đầu
+        AssignPlayerTarget();
+        // nếu chưa có thì check lại sau 1 giây
+        InvokeRepeating(nameof(AssignPlayerTarget), 0.5f, 1f);
+    }
+
+    public void AssignPlayerTarget()
+    {
+        if (freeLook == null) return;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player != null)
+        {
+            freeLook.Follow = player.transform;
+            freeLook.LookAt = player.transform;
+            Debug.Log("🎯 FreeLook Camera đã gán target vào Player!");
+            CancelInvoke(nameof(AssignPlayerTarget)); // ngừng loop sau khi gán xong
         }
         else
         {
-            LockCursor();
+            Debug.Log("⏳ Đang chờ Player spawn...");
         }
-    }
-
-    void LockCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked; // khóa chuột giữa màn hình
-        Cursor.visible = false;
-    }
-
-    void UnlockCursor()
-    {
-        Cursor.lockState = CursorLockMode.None; // trả chuột tự do
-        Cursor.visible = true;
     }
 }
